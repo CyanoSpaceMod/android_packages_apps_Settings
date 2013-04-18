@@ -142,7 +142,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         if (KEY_FONT_SIZE.equals(key)) {
             writeFontSizePreference(objValue);
             return true;            
-        }
         } else if (preference == mRecentAppSwitcher) {
             int val = Integer.parseInt((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),

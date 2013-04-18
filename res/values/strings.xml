@@ -4515,6 +4515,10 @@ found in the list of installed apps.</string>
     <string name="increasing_ring_interval_5seconds">5 seconds</string>
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
 
+    <!-- Locked Bootloader Recovery Version -->
+    <string name="recovery_version">Recovery version</string>
+    <string name="recovery_version_default">CWM-6-recovery</string>
+   
     <!-- CM Updater -->
     <string name="cmupdate_settings_title">CyanogenMod updates</string>
     <string name="cmupdate_settings_summary">Check for, view or install available updates</string>

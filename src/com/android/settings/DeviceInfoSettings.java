@@ -86,8 +86,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         setValueSummary(KEY_MOD_VERSION, "ro.space.version");
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
-        setValueSummary(KEY_RECOVERY_VERSION, "ro.recversion");
-        findPreference(KEY_RECOVERY_VERSION).setEnabled(true);
 
 
         String cpuInfo = getCPUInfo();

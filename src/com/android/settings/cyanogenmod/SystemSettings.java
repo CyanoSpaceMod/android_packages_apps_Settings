@@ -144,7 +144,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
             return true;            
         } else if (preference == mRecentAppSwitcher) {
             int val = Integer.parseInt((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getActivity().getContentResolver();
                 Settings.System.RECENT_APP_SWITCHER, val);
             Helpers.restartSystemUI();
             return true;

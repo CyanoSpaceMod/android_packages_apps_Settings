@@ -141,12 +141,15 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         final String key = preference.getKey();
         if (KEY_FONT_SIZE.equals(key)) {
             writeFontSizePreference(objValue);
-            return true;            
+
+            return true;  
+          
         } else if (preference == mRecentAppSwitcher) {
-            int val = Integer.parseInt((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver();
-                Settings.System.RECENT_APP_SWITCHER, val);
+            int val = Integer.parseInt((String) objValue);
+            Settings.System.putInt(getActivity().getContentResolver());
+            Settings.System.RECENT_APP_SWITCHER;
             Helpers.restartSystemUI();
+
             return true;
         }
         return false;

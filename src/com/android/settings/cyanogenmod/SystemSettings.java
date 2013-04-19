@@ -140,8 +140,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         if (preference == mRecentAppSwitcher) {
                             
            Settings.System.putInt(getActivity().getContentResolver());
-           Settings.System.RECENT_APP_SWITCHER;
-           Helpers.restartSystemUI(; 
+           Settings.System.RECENT_APP_SWITCHER);
         }
  
         return true;

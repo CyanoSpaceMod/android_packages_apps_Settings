@@ -138,14 +138,8 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        final String key = preference.getKey();
-        if (KEY_FONT_SIZE.equals(key)) {
-            writeFontSizePreference(objValue);
-
-            return true;  
-          
-        } else if (preference == mRecentAppSwitcher) {
-            int val = Integer.parseInt((String) objValue);
+        if (preference == mRecentAppSwitcher) {
+                           
             Settings.System.putInt(getActivity().getContentResolver());
             Settings.System.RECENT_APP_SWITCHER;
             Helpers.restartSystemUI();

@@ -161,6 +161,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_SIGNAL_TEXT, signalStyle);
             return true;
+        } else if (preference == mRecentAppSwitcher) {
+            int val = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.RECENT_APP_SWITCHER, val);
+            return true;            
         }
         return false;
     }
@@ -187,12 +192,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             value = mStatusBarNotifCount.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_NOTIF_COUNT, value ? 1 : 0);
-            return true;
-        } else if (preference == mRecentAppSwitcher) {
-            int val = Integer.parseInt((String) newValue);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                Settings.System.RECENT_APP_SWITCHER, val);
-            Helpers.restartSystemUI();
             return true;            
         }
         return false;

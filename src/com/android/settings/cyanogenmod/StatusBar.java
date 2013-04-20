@@ -48,6 +48,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
 
     private static final String STATUS_BAR_CATEGORY_GENERAL = "status_bar_general";
+    
+    private static final String PREF_RECENT_APP_SWITCHER = "recent_app_switcher";
 
     private ListPreference mStatusBarAmPm;
 
@@ -64,6 +66,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private CheckBoxPreference mStatusBarNotifCount;
 
     private PreferenceCategory mPrefCategoryGeneral;
+    
+    private ListPreference mRecentAppSwitcher;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,6 +83,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarBattery = (ListPreference) prefSet.findPreference(STATUS_BAR_BATTERY);
         mCombinedBarAutoHide = (CheckBoxPreference) prefSet.findPreference(COMBINED_BAR_AUTO_HIDE);
         mStatusBarCmSignal = (ListPreference) prefSet.findPreference(STATUS_BAR_SIGNAL);
+        
+        mRecentAppSwitcher = (ListPreference) findPreference(PREF_RECENT_APP_SWITCHER);
+        mRecentAppSwitcher.setOnPreferenceChangeListener(this);
+        mRecentAppSwitcher.setValue(Integer.toString(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.RECENT_APP_SWITCHER,
+                0)));
 
         mStatusBarClock.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
                 Settings.System.STATUS_BAR_CLOCK, 1) == 1));
@@ -178,6 +188,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_NOTIF_COUNT, value ? 1 : 0);
             return true;
+        } else if (preference == mRecentAppSwitcher) {
+            int val = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.RECENT_APP_SWITCHER, val);
+            Helpers.restartSystemUI();
+            return true;            
         }
         return false;
     }

@@ -57,6 +57,13 @@
             android:entryValues="@array/values_status_bar_battery" />
 
         <ListPreference
+            android:key="recent_app_switcher"
+            android:title="@string/recent_app_switcher_title"
+            android:summary="@string/recent_app_switcher_summary"
+            android:entries="@array/recent_app_switcher_entries"
+            android:entryValues="@array/recent_app_switcher_values" />
+
+        <ListPreference
             android:key="status_bar_signal"
             android:dialogTitle="@string/status_bar_signal_text_title"
             android:title="@string/status_bar_signal_text_title"

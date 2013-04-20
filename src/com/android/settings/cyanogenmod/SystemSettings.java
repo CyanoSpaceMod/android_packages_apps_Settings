@@ -41,10 +41,8 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     private static final String KEY_NOTIFICATION_DRAWER = "notification_drawer";
     private static final String KEY_NOTIFICATION_DRAWER_TABLET = "notification_drawer_tablet";
     private static final String KEY_NAVIGATION_BAR = "navigation_bar";
-    private static final String PREF_RECENT_APP_SWITCHER = "recent_app_switcher";
 
     private ListPreference mFontSizePref;
-    private ListPreference mRecentAppSwitcher;
 
     private final Configuration mCurConfig = new Configuration();
     
@@ -53,11 +51,6 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.system_settings);
-        
-        mRecentAppSwitcher = (ListPreference) findPreference(PREF_RECENT_APP_SWITCHER);
-        mRecentAppSwitcher.setOnPreferenceChangeListener(this);
-        mRecentAppSwitcher.setValue(Integer.toString(Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.RECENT_APP_SWITCHER,0)));       
 
         mFontSizePref = (ListPreference) findPreference(KEY_FONT_SIZE);
         mFontSizePref.setOnPreferenceChangeListener(this);
@@ -137,12 +130,11 @@ public class SystemSettings extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mRecentAppSwitcher) {
-                            
-           Settings.System.putInt(getActivity().getContentResolver());
-           Settings.System.RECENT_APP_SWITCHER;
+        final String key = preference.getKey();
+        if (KEY_FONT_SIZE.equals(key)) {
+            writeFontSizePreference(objValue);
         }
- 
+
         return true;
     }
 }

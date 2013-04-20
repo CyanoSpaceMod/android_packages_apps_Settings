@@ -1265,7 +1265,20 @@
         <item>43200</item>
         <item>86400</item>
     </string-array>
+    
+    <!-- **** CYANOSPACEMOD EDITS **** -->    
+    <string-array name="recent_app_switcher_entries">
+        <item>Stock</item>
+        <item>WebOS style</item>
+        <item>Sense 4 style</item>
+    </string-array>
 
+    <string-array name="recent_app_switcher_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    
     <!-- **** CYANOGENMOD EDITS END **** -->
     <string-array name="increasing_ring_interval_entries" translatable="false">
         <item>@string/increasing_ring_interval_eachring</item>

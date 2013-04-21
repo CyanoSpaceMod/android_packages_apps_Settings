@@ -51,6 +51,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     
     private static final String PREF_RECENT_APP_SWITCHER = "recent_app_switcher";
 
+    private static final String PREF_RECENT_KILL_ALL = "recent_kill_all";
+    
     private ListPreference mStatusBarAmPm;
 
     private ListPreference mStatusBarBattery;
@@ -64,6 +66,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private CheckBoxPreference mCombinedBarAutoHide;
 
     private CheckBoxPreference mStatusBarNotifCount;
+    
+    private CheckBoxPreference mRecentKillAll;
 
     private PreferenceCategory mPrefCategoryGeneral;
     
@@ -89,6 +93,10 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mRecentAppSwitcher.setValue(Integer.toString(Settings.System.getInt(getActivity()
                 .getContentResolver(), Settings.System.RECENT_APP_SWITCHER,
                 0)));
+
+        mRecentKillAll = (CheckBoxPreference) findPreference(PREF_RECENT_KILL_ALL);
+        mRecentKillAll.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.RECENT_KILL_ALL_BUTTON, 0) == 1);
 
         mStatusBarClock.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
                 Settings.System.STATUS_BAR_CLOCK, 1) == 1));
@@ -192,6 +200,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             value = mStatusBarNotifCount.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_NOTIF_COUNT, value ? 1 : 0);
+            return true;            
+        } else if (preference == mRecentKillAll) {
+            boolean checked = ((CheckBoxPreference) preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.RECENT_KILL_ALL_BUTTON, checked ? 1 : 0);
             return true;            
         }
         return false;

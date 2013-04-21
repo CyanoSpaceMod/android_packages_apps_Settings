@@ -72,11 +72,6 @@
             android:entryValues="@array/values_status_bar_signal" />
 
         <CheckBoxPreference
-            android:key="recent_kill_all"
-            android:title="@string/recent_kill_all"
-            android:summary="@string/recent_kill_all_summary" />
-
-        <CheckBoxPreference
             android:key="status_bar_notif_count"
             android:title="@string/status_bar_notif_count_title"
             android:summary="@string/status_bar_notif_count_summary"

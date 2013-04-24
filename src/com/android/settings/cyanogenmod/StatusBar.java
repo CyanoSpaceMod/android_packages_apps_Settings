@@ -87,7 +87,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mRecentAppSwitcher = (ListPreference) findPreference(PREF_RECENT_APP_SWITCHER);
         mRecentAppSwitcher.setOnPreferenceChangeListener(this);
         mRecentAppSwitcher.setValue(Integer.toString(Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.RECENT_APP_SWITCHER, 0)));
+                .getContentResolver(), Settings.System.RECENT_APP_SWITCHER,
+                0)));
 
         mStatusBarClock.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
                 Settings.System.STATUS_BAR_CLOCK, 1) == 1));

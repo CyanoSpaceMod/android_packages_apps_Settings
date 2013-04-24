@@ -28,6 +28,5 @@ public class SpaceSettings extends SettingsPreferenceFragment {
         mLockscreenSettings = (PreferenceScreen) findPreference(LOCKSCREEN_SETTINGS);
         mLockscreenStyles = (PreferenceScreen) findPreference(LOCKSCREEN_STYLES);
         mLockscreenWeather = (PreferenceScreen) findPreference(LOCKSCREEN_WEATHER);
-        }
     }
 }

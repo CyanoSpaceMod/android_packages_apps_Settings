@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/lockscreen_settings"
+    android:key="lockscreen_settings">
+
+    <PreferenceCategory
+            android:key="general_category"
+            android:title="Lockscreen Add-ons">
+
+        <CheckBoxPreference
+            android:key="lockscreen_battery"
+            android:title="@string/lockscreen_battery" />
+
+        <CheckBoxPreference
+            android:key="volume_wake"
+            android:title="@string/volume_wake" />
+
+        <CheckBoxPreference
+            android:key="volume_skip"
+            android:title="@string/volume_skip_title"
+            android:summary="@string/volume_skip_summary" />
+
+	<ListPreference
+	    android:key="lockscreen_music_widget"
+	    android:entries="@array/lockscreen_music_widget_entries"
+	    android:entryValues="@array/lockscreen_music_widget_values"
+	    android:title="@string/lockscreen_music_widget_title"
+	    android:summary="@string/lockscreen_music_widget_summary" />
+
+    <ListPreference
+        android:key="lockscreen_background"
+        android:persistent="false"
+        android:dialogTitle="@string/lockscreen_custom_background_title"
+        android:title="@string/lockscreen_custom_background_title"
+        android:entries="@array/lockscreen_background_entries"
+        android:entryValues="@array/lockscreen_background_values"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:key="unlock_category"
+            android:title="Unlocking Modifications">
+
+	<CheckBoxPreference
+            android:key="lockscreen_before_unlock"
+            android:title="@string/lockscreen_before_unlock" >
+        </CheckBoxPreference>
+
+	<CheckBoxPreference
+            android:key="quick_password_unlock"
+            android:title="@string/quick_password_title"
+            android:summary="@string/quick_password_summary" >
+    </CheckBoxPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:key="sms_call_widget"
+            android:title="SMS Call widget settings">
+
+        <CheckBoxPreference
+            android:key="lockscreen_sms_call_widget"
+            android:title="@string/lockscreen_sms_call_widget_title"
+            android:summary="@string/lockscreen_sms_call_widget_summary" >
+        </CheckBoxPreference>
+
+    </PreferenceCategory>
+</PreferenceScreen>

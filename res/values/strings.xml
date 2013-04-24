@@ -4538,4 +4538,6 @@ found in the list of installed apps.</string>
     <string name="lockscreen_background_custom_image">Custom image</string>
     <string name="lockscreen_background_default_wallpaper">Default wallpaper</string>
 	
+	<string name="space_app">Space Setting</string>
+	
 </resources>

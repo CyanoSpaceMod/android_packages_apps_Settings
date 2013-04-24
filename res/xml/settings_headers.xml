@@ -84,7 +84,7 @@
         android:fragment="com.android.settings.cyanogenmod.SystemSettings"
         android:title="@string/system_settings_title" />
 
-    <!-- Gummy Settings -->
+    <!-- Space Settings -->
     <header
         android:id="@+id/space_settings"
         android:icon="@drawable/space_coke"

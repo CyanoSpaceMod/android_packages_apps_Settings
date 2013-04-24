@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/space_app"
+    android:key="space_settings"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceScreen
+            android:key="lockscreen_styles"
+            android:title="@string/lockscreen_styles"
+            android:icon="@drawable/space_lock_styles"
+            android:fragment="com.android.settings.LockscreenStyles" />
+
+    <PreferenceScreen
+            android:key="lockscreen_settings"
+            android:title="@string/lockscreen_settings"
+            android:icon="@drawable/space_lockscreen"
+            android:fragment="com.android.settings.LockscreenSettings" />
+			
+    <PreferenceScreen
+           android:key="lockscreen_weather"
+           android:title="@string/lockscreen_weather_title"
+           android:icon="@drawable/space_weather"
+           android:fragment="com.android.settings.cyanogenmod.Weather" />
+
+</PreferenceScreen>

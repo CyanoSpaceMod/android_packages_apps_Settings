@@ -50,12 +50,14 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String STATUS_BAR_CATEGORY_GENERAL = "status_bar_general";
     
     private static final String PREF_RECENT_APP_SWITCHER = "recent_app_switcher";
-
+    
     private ListPreference mStatusBarAmPm;
 
     private ListPreference mStatusBarBattery;
 
     private ListPreference mStatusBarCmSignal;
+
+    private ListPreference mRecentAppSwitcher;
 
     private CheckBoxPreference mStatusBarClock;
 
@@ -66,8 +68,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private CheckBoxPreference mStatusBarNotifCount;
 
     private PreferenceCategory mPrefCategoryGeneral;
-    
-    private ListPreference mRecentAppSwitcher;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -192,7 +192,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             value = mStatusBarNotifCount.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_NOTIF_COUNT, value ? 1 : 0);
-            return true;            
+            return true;                  
         }
         return false;
     }

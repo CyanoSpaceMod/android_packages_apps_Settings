@@ -57,6 +57,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
     private ListPreference mStatusBarCmSignal;
 
+    private ListPreference mRecentAppSwitcher;
+
     private CheckBoxPreference mStatusBarClock;
 
     private CheckBoxPreference mStatusBarBrightnessControl;
@@ -64,8 +66,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private CheckBoxPreference mCombinedBarAutoHide;
 
     private CheckBoxPreference mStatusBarNotifCount;
-    
-    private CheckBoxPreference mRecentKillAll;
 
     private PreferenceCategory mPrefCategoryGeneral;
 
@@ -87,8 +87,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mRecentAppSwitcher = (ListPreference) findPreference(PREF_RECENT_APP_SWITCHER);
         mRecentAppSwitcher.setOnPreferenceChangeListener(this);
         mRecentAppSwitcher.setValue(Integer.toString(Settings.System.getInt(getActivity()
-                .getContentResolver(), Settings.System.RECENT_APP_SWITCHER,
-                0)));
+                .getContentResolver(), Settings.System.RECENT_APP_SWITCHER, 0)));
 
         mStatusBarClock.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
                 Settings.System.STATUS_BAR_CLOCK, 1) == 1));

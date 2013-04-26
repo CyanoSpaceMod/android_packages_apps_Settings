@@ -411,17 +411,15 @@ public class LockscreenStyles extends SettingsPreferenceFragment implements
                 break;
             case 6:
                 lsGen.add(mLockStyle);
-                lsGenEnable.add(true);
-                lsGen.add(mLockExtra);
-                lsGenEnable.add(true);                
+                lsGenEnable.add(true);              
                 lsApp.add(mCustomApp1);
-                lsAppEnable.add(mLockExtra.isChecked());
+                lsAppEnable.add(true);
                 lsApp.add(mCustomApp2);
-                lsAppEnable.add(mLockExtra.isChecked());
+                lsAppEnable.add(true);
                 lsApp.add(mCustomApp3);
-                lsAppEnable.add(mLockExtra.isChecked());
+                lsAppEnable.add(true);
                 lsApp.add(mCustomApp4);
-                lsAppEnable.add(mLockExtra.isChecked());
+                lsAppEnable.add(true);
                 break;
         }
 

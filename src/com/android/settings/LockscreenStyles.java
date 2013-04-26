@@ -1,4 +1,3 @@
-
 package com.android.settings;
 
 import android.app.Activity;
@@ -372,9 +371,12 @@ public class LockscreenStyles extends SettingsPreferenceFragment implements
                 lsGenEnable.add(true);
                 lsGen.add(mRotaryArrows);
                 lsGenEnable.add(true);
+                lsGen.add(mRotaryDown);
+                lsGenEnable.add(true);
+                lsApp.add(mCustomApp1);
+                lsAppEnable.add(true);
                 lsApp.add(mSoundCamera);
                 lsAppEnable.add(true);
-                break;
             case 3:
                 lsGen.add(mLockStyle);
                 lsGenEnable.add(true);
@@ -410,8 +412,16 @@ public class LockscreenStyles extends SettingsPreferenceFragment implements
             case 6:
                 lsGen.add(mLockStyle);
                 lsGenEnable.add(true);
+                lsGen.add(mLockExtra);
+                lsGenEnable.add(true);                
                 lsApp.add(mCustomApp1);
-                lsAppEnable.add(true);
+                lsAppEnable.add(mLockExtra.isChecked());
+                lsApp.add(mCustomApp2);
+                lsAppEnable.add(mLockExtra.isChecked());
+                lsApp.add(mCustomApp3);
+                lsAppEnable.add(mLockExtra.isChecked());
+                lsApp.add(mCustomApp4);
+                lsAppEnable.add(mLockExtra.isChecked());
                 break;
         }
 

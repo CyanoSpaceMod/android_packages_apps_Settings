@@ -12,11 +12,15 @@ public class SpaceSettings extends SettingsPreferenceFragment {
 	
     private static final String LOCKSCREEN_SETTINGS = "lockscreen_settings";
     private static final String LOCKSCREEN_STYLES = "lockscreen_styles";
-    private static final String LOCKSCREEN_WEATHER = "lockscreen_weather";	
+    private static final String LOCKSCREEN_WEATHER = "lockscreen_weather";
+    private static final String ABOUT_SETTINGS = "about_settings";	
+	private static final String SYSTEMUI_TWEAKS = "systemui_tweaks";
 
     PreferenceScreen mLockscreenSettings;
     PreferenceScreen mLockscreenStyles;
     PreferenceScreen mLockscreenWeather;
+	PreferenceScreen mSystemUITweaks;
+	PreferenceScreen mAbout;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,8 @@ public class SpaceSettings extends SettingsPreferenceFragment {
 
         PreferenceScreen prefs = getPreferenceScreen();
         
+		mAbout = (PreferenceScreen) findPreference(ABOUT_SETTINGS);
+		mSystemUITweaks = (PreferenceScreen) findPreference(SYSTEMUI_TWEAKS);
         mLockscreenSettings = (PreferenceScreen) findPreference(LOCKSCREEN_SETTINGS);
         mLockscreenStyles = (PreferenceScreen) findPreference(LOCKSCREEN_STYLES);
         mLockscreenWeather = (PreferenceScreen) findPreference(LOCKSCREEN_WEATHER);

@@ -4540,7 +4540,7 @@ found in the list of installed apps.</string>
     <string name="space_app">CyanoSpaceMod Setting</string>	
 	
     <!-- About Strings-->
-	<string name="about_coke">About CyanoSpaceMod</string>
+    <string name="about_coke">About CyanoSpaceMod</string>
     <string name="rom_link">Rom Thread Link</string>
     <string name="spacecaker_user_title">SpaceCaker</string>
     <string name="spacecaker_user_summary">http://forum.xda-developers.com/member.php?u=3862405</string>

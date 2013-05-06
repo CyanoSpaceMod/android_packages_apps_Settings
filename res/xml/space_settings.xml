@@ -22,5 +22,17 @@
            android:title="@string/lockscreen_weather_title"
            android:icon="@drawable/space_weather"
            android:fragment="com.android.settings.cyanogenmod.Weather" />
-
+		   
+    <PreferenceScreen
+            android:key="systemui_tweaks"
+            android:title="@string/status_bar_title"
+            android:icon="@drawable/space_systemui"
+            android:fragment="com.android.settings.SystemUITweaks" />
+			
+    <PreferenceScreen
+            android:key="about_settings"
+            android:title="@string/about_coke"
+            android:icon="@drawable/ic_settings_about"
+            android:fragment="com.android.settings.About" />
+			
 </PreferenceScreen>

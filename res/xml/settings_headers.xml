@@ -88,7 +88,7 @@
     <header
         android:id="@+id/space_settings"
         android:icon="@drawable/space_coke"
-        android:title="Space_Settings"
+        android:title="@string/space_app"
         android:fragment="com.android.settings.SpaceSettings" />
 		
     <!-- DEVICE -->

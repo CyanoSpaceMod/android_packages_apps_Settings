@@ -1,4 +1,3 @@
-
 package com.android.settings;
 
 import android.app.Activity;
@@ -25,8 +24,6 @@ import com.android.settings.Utils;
 public class SystemUITweaks extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 	
-        private boolean isTablet;
-
    private static final String PREF_RECENT_APP_SWITCHER ="recent_app_switcher";
 
    private ListPreference mRecentAppSwitcher;
@@ -43,8 +40,7 @@ public class SystemUITweaks extends SettingsPreferenceFragment implements
        mRecentAppSwitcher.setValue(Integer.toString(Settings.System.getInt(getActivity()
                .getContentResolver(), Settings.System.RECENT_APP_SWITCHER,
                0)));
-       }
-   }
+   }  
 
    @Override
    public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -56,4 +52,5 @@ public class SystemUITweaks extends SettingsPreferenceFragment implements
            return true;
        }
        return false;
-   }
+    }
+}

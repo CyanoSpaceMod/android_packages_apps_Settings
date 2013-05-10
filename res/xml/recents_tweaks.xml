@@ -14,8 +14,8 @@
 	
         <PreferenceScreen 
         android:title="Battery Status Style" 
-        android:summary="Display style of battery status "
-        android:action="com.ghareeb.battery.Settings" />       
+        android:summary="Display style of battery status"
+        android:action="com.ghareeb.battery.Settings">  
         </PreferenceScreen>	
         
 </PreferenceScreen>

@@ -13,8 +13,8 @@
         android:entryValues="@array/recent_app_switcher_values" />
 	
         <PreferenceScreen 
-        android:title="Battery Mod" 
-        android:summary="Change ur Battery Icon in statusbar"
+        android:title="Battery Status Style" 
+        android:summary="Display style of battery status "
         android:action="com.ghareeb.battery.Settings" />       
         </PreferenceScreen>	
         

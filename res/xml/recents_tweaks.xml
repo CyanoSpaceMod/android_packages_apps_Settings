@@ -11,11 +11,5 @@
         android:summary="@string/recent_app_switcher_summary"
         android:entries="@array/recent_app_switcher_entries"
         android:entryValues="@array/recent_app_switcher_values" />
-	
-        <PreferenceScreen 
-        android:title="Battery Status Style" 
-        android:summary="Display style of battery status"
-        android:action="com.ghareeb.battery.Settings">  
-        </PreferenceScreen>	
         
 </PreferenceScreen>

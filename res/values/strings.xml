@@ -4538,6 +4538,8 @@ found in the list of installed apps.</string>
     <string name="lockscreen_background_custom_image">Custom image</string>
     <string name="lockscreen_background_default_wallpaper">Default wallpaper</string>
     <string name="space_app">CyanoSpaceMod Setting</string>	
+    <string name="batter_percentage">Show Percentage</string>
+    <string name="charge_animee">Charging Animation</string>
 	
     <!-- About Strings-->
     <string name="about_coke">About CyanoSpaceMod</string>
@@ -4546,5 +4548,7 @@ found in the list of installed apps.</string>
     <string name="spacecaker_user_summary">http://forum.xda-developers.com/member.php?u=3862405</string>
     <string name="space_source_main">CyanoSpaceMod Rom Source</string>
     <string name="space_summary_secondary">https://github.com/CyanoSpaceMod</string>
-	
+    <string name="app_name">Battery Style</string>
+    <string name="battry_style_title">Battery Style</string>
+    <string name="battry_style_summary">Display Style of Battery Status</string>	
 </resources>

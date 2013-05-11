@@ -4541,11 +4541,9 @@ found in the list of installed apps.</string>
 	
     <!-- About Strings-->
     <string name="about_coke">About CyanoSpaceMod</string>
-    <string name="rom_link">Rom Thread Link</string>
+    <string name="rom_link">About ROM</string>
     <string name="spacecaker_user_title">SpaceCaker</string>
     <string name="spacecaker_user_summary">http://forum.xda-developers.com/member.php?u=3862405</string>
     <string name="space_source_main">CyanoSpaceMod Rom Source</string>
-    <string name="space_summary_secondary">https://github.com/CyanoSpaceMod</string>
-    <string name="battry_style_title">Battery Style</string>
-	
+    <string name="space_summary_secondary">https://github.com/CyanoSpaceMod</string>	
 </resources>

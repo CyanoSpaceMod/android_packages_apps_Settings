@@ -90,16 +90,6 @@
         android:icon="@drawable/space_coke"
         android:title="@string/space_app"
         android:fragment="com.android.settings.SpaceSettings" />
-
-    <header
-        android:id="@+id/battery_mod_csm"
-        android:icon="@drawable/ic_battery_csm"
-        android:title="@string/battery_style_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="com.ghareeb.battery"
-            android:targetClass="com.ghareeb.battery.Settings" />
-    </header>
 		
     <!-- DEVICE -->
     <header android:title="@string/header_category_device" />

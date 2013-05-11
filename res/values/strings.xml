@@ -4546,6 +4546,10 @@ found in the list of installed apps.</string>
     <string name="spacecaker_user_summary">http://forum.xda-developers.com/member.php?u=3862405</string>
     <string name="space_source_main">CyanoSpaceMod Rom Source</string>
     <string name="space_summary_secondary">https://github.com/CyanoSpaceMod</string>
+<<<<<<< HEAD
     <string name="battery_style_title">Battery Style</string>
+=======
+    <string name="battry_style_title">Battery Style</string>
+>>>>>>> abb74aa8763cde8601009776add0c681f4c20c12
 	
 </resources>
